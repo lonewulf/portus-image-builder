@@ -7,8 +7,12 @@ env:
   - PORTUS_VERSION=v2.0
   - PORTUS_VERSION=master
 
-allow_failures:
+matrix:
+  allow_failures:
     - env: PORTUS_VERSION=master
+
+before_script:
+  - docker -v
 
 script:
    - ./update.sh $PORTUS_VERSION
