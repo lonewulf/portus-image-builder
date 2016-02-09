@@ -1,7 +1,4 @@
-# portus-image-builder
-![Build status][master-build-status]
-
-[master-build-status]: https://api.travis-ci.org/lonewulf/portus-image-builder.svg "Build status"
+# portus-image-builder [![Build Status](https://travis-ci.org/lonewulf/portus-image-builder.svg?branch=master)](https://travis-ci.org/lonewulf/portus-image-builder)
 
 A small Portus docker image builder, based on the alpine linux image
 
