@@ -11,7 +11,7 @@ allow_failures:
     - env: PORTUS_VERSION=master
 
 script:
-   - ./update.sh $VERSION
+   - ./update.sh $PORTUS_VERSION
    - docker build -t lonewulf/portus .
 
 after_script:
