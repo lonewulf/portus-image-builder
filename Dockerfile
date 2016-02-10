@@ -15,6 +15,7 @@ RUN set -ex \
            mariadb-dev \
            musl-dev \
            openssl-dev \
+           ruby-dev \
            ruby-mini_portile \
     && apk add \
            bash \
@@ -27,7 +28,6 @@ RUN set -ex \
            openssl \
            ruby-bigdecimal \
            ruby-bundler \
-           ruby-dev \
            ruby-io-console \
            ruby-irb \
            ruby-json \
