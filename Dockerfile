@@ -20,7 +20,6 @@ RUN set -ex \
     && apk add \
            bash \
            ca-certificates \
-           git \
            libxslt \
            mariadb-client \
            mariadb-libs \

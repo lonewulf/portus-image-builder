@@ -2,4 +2,5 @@ Portus/tmp
 Portus/vagrant
 Portus/packaging
 Portus/log/*
+Portus/.git*
 .DS_Store
