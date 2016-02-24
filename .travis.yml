@@ -13,10 +13,17 @@ matrix:
 
 before_script:
   - docker -v
+  - docker pull alpine:3.3
+  - docker pull quay.io/lonewulf/portus
+  - docker images
+  - export OLD_HASH=$(docker images -q quay.io/lonewulf/portus)
 
 script:
    - ./update.sh $PORTUS_VERSION
-   - docker build -t lonewulf/portus .
+   - docker build -t quay.io/lonewulf/portus .
 
 after_script:
    - docker images
+
+after_success:
+  - packaging/quay.io/push.sh
