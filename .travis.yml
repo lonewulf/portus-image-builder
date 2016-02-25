@@ -14,7 +14,7 @@ matrix:
 before_script:
   - docker -v
   - docker pull alpine:3.3
-  - docker pull quay.io/lonewulf/portus
+  - docker pull quay.io/lonewulf/portus || exit 0
   - docker images
   - export OLD_HASH=$(docker images -q quay.io/lonewulf/portus)
 
