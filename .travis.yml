@@ -26,4 +26,4 @@ after_script:
    - docker images
 
 after_success:
-  - travis_wait packaging/quay.io/push.sh
+  - packaging/quay.io/push.sh
