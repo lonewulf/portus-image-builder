@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HASH=$(docker images -q quay.io/lonewulf/portus)
-if if [ -n $OLD_HASH ] && [ $HASH == $OLD_HASH ]; then
+if [ -n $OLD_HASH ] && [ $HASH == $OLD_HASH ]; then
   echo "Image already exists"
 elif [ $TRAVIS_PULL_REQUEST == "false" ] && [ $PORTUS_VERSION == "master" ] && [ $TRAVIS_BRANCH == "master" ]; then
   SHA=$(cat Portus/VERSION | cut -d '@' -f 2)
