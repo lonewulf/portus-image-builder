@@ -26,12 +26,12 @@ RUN set -ex \
            nodejs \
            openssl \
            ruby-bigdecimal \
-           ruby-bundler \
            ruby-io-console \
            ruby-irb \
            ruby-json \
            tzdata \
     && echo 'gem: --verbose --no-document' > /etc/gemrc \
+    && gem install bundler \
     && bundle install --retry=3 \
     && apk del --purge deps \
     && rm -rf /tmp/* /var/cache/apk/*
