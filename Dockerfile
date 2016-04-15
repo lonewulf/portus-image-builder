@@ -11,6 +11,7 @@ RUN set -ex \
            gcc \
            libxslt-dev \
            libxml2-dev \
+           libffi-dev \
            make \
            mariadb-dev \
            musl-dev \
@@ -20,6 +21,7 @@ RUN set -ex \
     && apk add \
            bash \
            ca-certificates \
+           libffi \
            libxslt \
            mariadb-client \
            mariadb-libs \
