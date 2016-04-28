@@ -4,6 +4,8 @@ ENV NOKOGIRI_USE_SYSTEM_LIBRARIES="1"
 
 WORKDIR /portus
 
+EXPOSE 3000
+
 COPY /Portus/Gemfile* ./
 
 RUN set -ex \
@@ -37,7 +39,5 @@ RUN set -ex \
     && bundle install --retry=3 \
     && apk del --purge deps \
     && rm -rf /tmp/* /var/cache/apk/*
-
-EXPOSE 3000
 
 COPY ./Portus .
