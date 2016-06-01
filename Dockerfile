@@ -9,7 +9,7 @@ EXPOSE 3000
 COPY /Portus/Gemfile* ./
 
 RUN set -ex \
-    && apk add --update -t deps \
+    && apk add --no-cache -t deps \
            gcc \
            libxslt-dev \
            libxml2-dev \
@@ -20,7 +20,7 @@ RUN set -ex \
            openssl-dev \
            ruby-dev \
            ruby-mini_portile \
-    && apk add \
+    && apk add --no-cache \
            bash \
            ca-certificates \
            libffi \
@@ -38,6 +38,6 @@ RUN set -ex \
     && gem install bundler \
     && bundle install --retry=3 \
     && apk del --purge deps \
-    && rm -rf /tmp/* /var/cache/apk/*
+    && rm -rf /tmp/*
 
 COPY ./Portus .
