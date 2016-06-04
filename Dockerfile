@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.4
 
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES="1"
 
@@ -19,7 +19,6 @@ RUN set -ex \
            musl-dev \
            openssl-dev \
            ruby-dev \
-           ruby-mini_portile \
     && apk add --no-cache \
            bash \
            ca-certificates \
