@@ -33,10 +33,12 @@ RUN set -ex \
            ruby-irb \
            ruby-json \
            tzdata \
+    && cp -r /usr/include/mysql/* /usr/include/ \
     && echo 'gem: --verbose --no-document' > /etc/gemrc \
     && gem install bundler \
     && bundle install --retry=3 \
     && apk del --purge deps \
-    && rm -rf /tmp/*
+    && rm -rf /tmp/* \
+    && rm -rf /usr/include/*
 
 COPY ./Portus .
