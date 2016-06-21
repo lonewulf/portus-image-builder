@@ -9,7 +9,7 @@ Use the included update.sh script to download/update the Portus files:
 ```
 
 Already built images are available at <https://quay.io/repository/lonewulf/portus>
-Or directly via docker:
+or directly via docker:
 ```bash
 docker pull quay.io/lonewulf/portus
 ```
