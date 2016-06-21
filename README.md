@@ -2,8 +2,14 @@
 
 A small Portus docker image builder, based on the alpine linux image
 
-Use the included update.sh script to download/update the Portus files
+Use the included update.sh script to download/update the Portus files:
 ```bash
 # Example
 ./update.sh master
+```
+
+Already built images are available at <https://quay.io/repository/lonewulf/portus>
+Or directly via docker:
+```bash
+docker pull quay.io/lonewulf/portus
 ```
