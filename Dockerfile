@@ -9,6 +9,7 @@ EXPOSE 3000
 COPY /Portus/Gemfile* ./
 
 RUN set -ex \
+    && apk upgrade --no-cache \
     && apk add --no-cache -t deps \
            gcc \
            libxslt-dev \
