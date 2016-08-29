@@ -26,6 +26,7 @@ RUN set -ex \
            libffi \
            libxslt \
            mariadb-client \
+           mariadb-client-libs \
            mariadb-libs \
            nodejs \
            openssl \
