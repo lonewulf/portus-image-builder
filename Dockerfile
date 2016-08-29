@@ -23,6 +23,7 @@ RUN set -ex \
     && apk add --no-cache \
            bash \
            ca-certificates \
+           libcurl \
            libffi \
            libxslt \
            mariadb-client \
