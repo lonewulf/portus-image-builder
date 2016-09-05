@@ -8,11 +8,6 @@ env:
 
 before_script:
   - docker -v
-  - docker pull quay.io/lonewulf/portus || return 0
-  - docker pull alpine:3.4
-  - docker images
-  - docker images -q quay.io/lonewulf/portus
-  - export OLD_HASH=$(docker images -q quay.io/lonewulf/portus)
 
 script:
    - ./update.sh $PORTUS_VERSION
