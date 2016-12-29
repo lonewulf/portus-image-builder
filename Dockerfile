@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.5
 
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES="1"
 
@@ -18,7 +18,7 @@ RUN set -ex \
            make \
            mariadb-dev \
            musl-dev \
-           openssl-dev \
+           libressl-dev \
            ruby-dev \
     && apk add --no-cache \
            bash \
@@ -30,7 +30,7 @@ RUN set -ex \
            mariadb-client-libs \
            mariadb-libs \
            nodejs \
-           openssl \
+           libressl \
            ruby-bigdecimal \
            ruby-io-console \
            ruby-irb \
