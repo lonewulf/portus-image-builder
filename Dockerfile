@@ -39,6 +39,7 @@ RUN set -ex \
     && echo 'gem: --verbose --no-document' > /etc/gemrc \
     && gem update --system \
     && gem install bundler \
+    && bundle update webmock \
     && bundle install --retry=3 \
     && apk del --purge deps \
     && rm -rf /tmp/* \
