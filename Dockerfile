@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES="1"
 
